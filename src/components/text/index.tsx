@@ -1,14 +1,14 @@
 import React, { ReactNode } from "react";
 
 type TextProps = {
-  value: string | ReactNode;
+  children: ReactNode;
   fontSize?: 12 | 16 | 18 | 20 | 24 | 32;
   fontWeight?: "normal" | "light" | "bold" | "extraBold";
   color?: "defalut" | "lighter" | "primary";
 };
 
 export const Text: React.FC<TextProps> = ({
-  value,
+  children,
   color = "defalut",
   fontSize = 16,
   fontWeight = "normal",
@@ -29,10 +29,10 @@ export const Text: React.FC<TextProps> = ({
       font-${fontWeight}
       ${color === "primary" && "text-primary"}
       ${color === "lighter" ? "text-grey-100" : "text-grey"}
-      dark: ${color !== "primary" && "text-white"}
+      dark: ${color !== "primary" && "text-whi"}
     `}
     >
-      {value}
+      {children}
     </p>
   );
 };
