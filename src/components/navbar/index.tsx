@@ -1,11 +1,16 @@
 import React from "react";
+import { NavButton, NavWrapper } from "./style";
 
-type Props = {};
+type NavbarProps = {
+  navItems: string[];
+};
 
-export const Navbar: React.FC = (props: Props) => {
+export const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
   return (
-    <nav className=" sticky top-10 flex flex-col gap-3 w-auto h-dvh overflow-[none]">
-      <button>hi</button>
-    </nav>
+    <NavWrapper>
+      {navItems.map((navItems) => {
+        return <NavButton key={navItems}>{navItems.toUpperCase()}</NavButton>;
+      })}
+    </NavWrapper>
   );
 };
