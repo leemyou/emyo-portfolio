@@ -1,6 +1,8 @@
 import tw from "tailwind-styled-components";
 
-export const InfoWrapper = tw.div`flex
+export const InfoWrapper = tw.div`
+  flex
   w-full
   min-h-dvh
-  bg-red-100`;
+  bg-red-100
+  `;

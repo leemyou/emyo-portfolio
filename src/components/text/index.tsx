@@ -5,6 +5,7 @@ type TextProps = {
   fontSize?: 12 | 16 | 18 | 20 | 24 | 32;
   fontWeight?: "normal" | "light" | "bold" | "extraBold";
   color?: "defalut" | "lighter" | "primary";
+  className?: string;
 };
 
 export const Text: React.FC<TextProps> = ({
@@ -12,6 +13,7 @@ export const Text: React.FC<TextProps> = ({
   color = "defalut",
   fontSize = 16,
   fontWeight = "normal",
+  className = "",
 }) => {
   const fontSizeClasses: Record<number, string> = {
     12: "text-sm",
@@ -30,6 +32,8 @@ export const Text: React.FC<TextProps> = ({
       ${color === "primary" && "text-primary"}
       ${color === "lighter" ? "text-grey-100" : "text-grey"}
       dark: ${color !== "primary" && "text-whi"}
+      leading-none
+      ${className}
     `}
     >
       {children}
