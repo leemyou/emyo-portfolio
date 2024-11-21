@@ -1,18 +1,30 @@
 import tw from "tailwind-styled-components";
 
 export const MContainerWrapper = tw.div`
+  relative
   flex 
   w-full
   h-dvh
   flex-col
   items-center
   justify-center
-  gap-20`;
+  gap-20
+`;
+
+export const MContainerBg = tw.div`
+  absolute
+  w-full
+  h-full
+  bg-white
+  opacity-50
+`;
 
 export const MContainerTitleBox = tw.h1`
   text-center
   font-extrabold
-  text-6xl`;
+  text-6xl
+  text-grey-200
+  z-10`;
 
 export const MContainerNameBox = tw.div`
   flex
